@@ -1,12 +1,30 @@
 
 /*CSS comment*/
 * { /*Universal Selector*/
-  box-sizing: border-box; /*keeps all border and padding dimensions inside specified box dimensions*/
-  /*default setting is 'content-box' */
+	box-sizing: border-box; /*keeps all border and padding dimensions inside specified box dimensions*/
+	/*default setting is 'content-box' */
 }
 html {
-  font-size: 10px; /* px means 'pixels': the base font size is now 10 pixels high  */
-  font-family: 'Open Sans', sans-serif; /* this should be the rest of the output you got from Google fonts */
-  background-color: #00539F;
-  }
+	font-size: 10px; /* px means 'pixels': the base font size is now 10 pixels high  */
+	font-family: 'Open Sans', sans-serif; /* this should be the rest of the output you got from Google fonts */
+	background-color: white;
+}
+
+#grid {
+	display: grid;
+	grid-template-columns: repeat(16, minmax(50px, 1fr));
+	grid-template-rows: repeat(16, minmax(50px, 1fr));
+	grid-gap: 0.5em;
+}
+
+.tile {
+	background-color: blue;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 0;
+	padding-bottom: 100%;
+}
+
 
