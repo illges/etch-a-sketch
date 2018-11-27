@@ -4,8 +4,9 @@ createGrid(grid, prompt("Enter Grid Size.", 16));
 const tileArray = Array.from(document.querySelectorAll(".tile"));
 tileArray.forEach(hover => hover.addEventListener('mouseover', hoverColor));
 
-document.getElementById("button").addEventListener("click", refreshPage);
-//document.getElementById("button").addEventListener("click", createGrid(grid, prompt("Enter Grid Size.", 16)));
+
+const button = document.querySelector('#button');
+button.addEventListener('click', refreshPage)
 
 
 function createGrid(grid, size) {
@@ -46,18 +47,7 @@ function getRandomRgb() {
 
 function refreshPage(){
 
-	//window.location.reload();
-	//while (grid.firstChild) {
-		//grid.removeChild(grid.firstChild);
-	//}
-
-	grid.innerHTML = '';
-
-	grid.style.gridTemplateColumns = 'none';
-    grid.style.gridTemplateRows = 'none';
-
-
-	createGrid(grid, prompt("Enter Grid Size.", 16));
+	window.location.reload();
 	
 }
 
